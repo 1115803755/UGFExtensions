@@ -42,25 +42,25 @@ namespace UGFExtensions.Await
         public static void SubscribeEvent()
         {
             EventComponent eventComponent = UnityGameFramework.Runtime.GameEntry.GetComponent<EventComponent>();
-            eventComponent.Subscribe(OpenUIFormSuccessEventArgs.EventId, OnOpenUIFormSuccess);
-            eventComponent.Subscribe(OpenUIFormFailureEventArgs.EventId, OnOpenUIFormFailure);
+            eventComponent.Subscribe(OpenUIFormSuccessEventArgs.s_EventId, OnOpenUIFormSuccess);
+            eventComponent.Subscribe(OpenUIFormFailureEventArgs.s_EventId, OnOpenUIFormFailure);
 
-            eventComponent.Subscribe(ShowEntitySuccessEventArgs.EventId, OnShowEntitySuccess);
-            eventComponent.Subscribe(ShowEntityFailureEventArgs.EventId, OnShowEntityFailure);
+            eventComponent.Subscribe(ShowEntitySuccessEventArgs.s_EventId, OnShowEntitySuccess);
+            eventComponent.Subscribe(ShowEntityFailureEventArgs.s_EventId, OnShowEntityFailure);
 
-            eventComponent.Subscribe(LoadSceneSuccessEventArgs.EventId, OnLoadSceneSuccess);
-            eventComponent.Subscribe(LoadSceneFailureEventArgs.EventId, OnLoadSceneFailure);
-            eventComponent.Subscribe(UnloadSceneSuccessEventArgs.EventId, OnUnloadSceneSuccess);
-            eventComponent.Subscribe(UnloadSceneFailureEventArgs.EventId, OnUnloadSceneFailure);
+            eventComponent.Subscribe(LoadSceneSuccessEventArgs.s_EventId, OnLoadSceneSuccess);
+            eventComponent.Subscribe(LoadSceneFailureEventArgs.s_EventId, OnLoadSceneFailure);
+            eventComponent.Subscribe(UnloadSceneSuccessEventArgs.s_EventId, OnUnloadSceneSuccess);
+            eventComponent.Subscribe(UnloadSceneFailureEventArgs.s_EventId, OnUnloadSceneFailure);
 
-            // eventComponent.Subscribe(LoadDataTableSuccessEventArgs.EventId, OnLoadDataTableSuccess);
-            // eventComponent.Subscribe(LoadDataTableFailureEventArgs.EventId, OnLoadDataTableFailure);
+            // eventComponent.Subscribe(LoadDataTableSuccessEventArgs.s_EventId, OnLoadDataTableSuccess);
+            // eventComponent.Subscribe(LoadDataTableFailureEventArgs.s_EventId, OnLoadDataTableFailure);
 
-            eventComponent.Subscribe(WebRequestSuccessEventArgs.EventId, OnWebRequestSuccess);
-            eventComponent.Subscribe(WebRequestFailureEventArgs.EventId, OnWebRequestFailure);
+            eventComponent.Subscribe(WebRequestSuccessEventArgs.s_EventId, OnWebRequestSuccess);
+            eventComponent.Subscribe(WebRequestFailureEventArgs.s_EventId, OnWebRequestFailure);
 
-            eventComponent.Subscribe(DownloadSuccessEventArgs.EventId, OnDownloadSuccess);
-            eventComponent.Subscribe(DownloadFailureEventArgs.EventId, OnDownloadFailure);
+            eventComponent.Subscribe(DownloadSuccessEventArgs.s_EventId, OnDownloadSuccess);
+            eventComponent.Subscribe(DownloadFailureEventArgs.s_EventId, OnDownloadFailure);
 #if UNITY_EDITOR
             s_IsSubscribeEvent = true;
 #endif

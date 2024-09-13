@@ -18,8 +18,8 @@ namespace UGFExtensions.Texture
         {
             m_WebRequestComponent = UnityGameFramework.Runtime.GameEntry.GetComponent<WebRequestComponent>();
             EventComponent eventComponent = UnityGameFramework.Runtime.GameEntry.GetComponent<EventComponent>();
-            eventComponent.Subscribe(WebRequestSuccessEventArgs.EventId,OnWebGetTextureSuccess);
-            eventComponent.Subscribe(WebRequestFailureEventArgs.EventId,OnWebGetTextureFailure);
+            eventComponent.Subscribe(WebRequestSuccessEventArgs.s_EventId, OnWebGetTextureSuccess);
+            eventComponent.Subscribe(WebRequestFailureEventArgs.s_EventId, OnWebGetTextureFailure);
         }
         /// <summary>
         /// 通过网络设置图片
